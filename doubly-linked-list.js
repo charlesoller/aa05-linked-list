@@ -15,29 +15,28 @@ class DoublyLinkedList {
 
   addToHead(val) {
     const newNode = new DoublyLinkedListNode(val);
+
+    //If this is the first node in the linked list, set the tail to be the newNode (newNode would be head and tail in this instance)
     if (this.tail === null) {
       this.tail = newNode;
+    } else {
+      //In the case that there is already at least one Node
+      //Access this node's prev property, set it to the node being added.
+      this.head.prev = newNode;
     }
+
+    //The next will point to this.head
     newNode.next = this.head; // The previous Head reassigned to the next.
 
-    // if (this.head.prev === null) {
-    //   this.head.prev = newNode;
-    //   console.log("Flag 1: ", this.head.prev)
-    // }
-    // console.log("Flag 2: ", this.head)
-    // console.log("Flag 3: ", this.head);
-    newNode.prev = null;
+    //Prev is equal to null for the new node being added to front.
     this.head = newNode;
 
     this.length++;
-    // console.log("Flag 4: ", newNode)
-    console.log(this)
-
   }
 
 
   addToTail(val) {
-    // Your code here
+
   }
 
   // You can use this function to help debug
