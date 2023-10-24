@@ -34,7 +34,6 @@ class DoublyLinkedList {
     this.length++;
   }
 
-
   // addToHead(val) {
   //   const newNode = new DoublyLinkedListNode(val);
   //   if (this.head === null) {
@@ -47,10 +46,6 @@ class DoublyLinkedList {
   //   }
   //   this.length++;
   // }
-
-
-
-
 
   addToTail(val) {
     const newNode = new DoublyLinkedListNode(val);

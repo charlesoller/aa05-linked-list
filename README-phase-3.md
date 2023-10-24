@@ -10,6 +10,14 @@ Continue working in same the [starter] repo as phases 1 and 2.
 Identify the time complexity of `addToHead` and `addToTail` for both the
 single and doubly linked lists.
 
+Singly Linked:
+addToHead: O(1)
+addToTail: O(n)
+
+Doubly Linked:
+addToHead: O(1)
+addToTail: O(1)
+
 Construct a timing test in **linked-list-timing.js** to verify your hypothesis.
 
 There are no test specs for this phase.
