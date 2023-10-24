@@ -20,6 +20,4 @@ Construct a timing test to verify the time complexities of `addToHead` and
 
 let test = new LinkedList();
 
-// word word
-
 console.log(timeFunction(10000))
