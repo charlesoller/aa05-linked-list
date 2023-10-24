@@ -15,25 +15,31 @@ class DoublyLinkedList {
 
   addToHead(val) {
     const newNode = new DoublyLinkedListNode(val);
-    if (this.tail === null) {
-      this.tail = newNode;
+    if (this.head === null) {
+      this.head = newNode; // set head to newNode if null
+      this.tail = this.head // set tail to head
+    } else {
+      this.head.prev = newNode;
+      newNode.next = this.head;
+      this.head = newNode;
     }
-    newNode.next = this.head; // The previous Head reassigned to the next.
-
-    // if (this.head.prev === null) {
-    //   this.head.prev = newNode;
-    //   console.log("Flag 1: ", this.head.prev)
-    // }
-    // console.log("Flag 2: ", this.head)
-    // console.log("Flag 3: ", this.head);
-    newNode.prev = null;
-    this.head = newNode;
-
     this.length++;
-    // console.log("Flag 4: ", newNode)
-    console.log(this)
-
   }
+
+//   const newNode = new DoublyLinkedListNode(val);
+//   if (this.tail === null) {
+//     this.tail = newNode; // set head to newNode if null
+//     // this.tail = this.head // set tail to head
+//   } else {
+//     this.head.prev = newNode;
+
+//   }
+//   newNode.next = this.head;
+//   this.head = newNode;
+//   this.length++;
+// }
+
+
 
 
   addToTail(val) {
