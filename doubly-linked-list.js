@@ -35,25 +35,34 @@ class DoublyLinkedList {
   }
 
 
-  addToHead(val) {
-    const newNode = new DoublyLinkedListNode(val);
-    if (this.head === null) {
-      this.head = newNode; // set head to newNode if null
-      this.tail = this.head // set tail to head
-    } else {
-      this.head.prev = newNode;
-      newNode.next = this.head;
-      this.head = newNode;
-    }
-    this.length++;
-  }
+  // addToHead(val) {
+  //   const newNode = new DoublyLinkedListNode(val);
+  //   if (this.head === null) {
+  //     this.head = newNode; // set head to newNode if null
+  //     this.tail = this.head // set tail to head
+  //   } else {
+  //     this.head.prev = newNode;
+  //     newNode.next = this.head;
+  //     this.head = newNode;
+  //   }
+  //   this.length++;
+  // }
 
 
 
 
 
   addToTail(val) {
+    const newNode = new DoublyLinkedListNode(val);
+    if (this.head === null) {
+      this.head = newNode;
+    } else {
+      this.tail.next = newNode;
 
+    }
+    newNode.prev = this.tail;
+    this.tail = newNode;
+    this.length++;
   }
 
   // You can use this function to help debug
